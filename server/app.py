@@ -1,2 +1,5 @@
 def main():
-    return "Server running"
+    print("Server running")
+
+if __name__ == "__main__":
+    main()
