@@ -1,9 +1,21 @@
 name: workplace-env
-description: Simulates workplace productivity tasks
+description: Simulates workplace productivity tasks using an AI agent
+
+version: 1.0
+
 tasks:
   - name: email
     difficulty: easy
+    description: Respond to workplace emails
+
   - name: cleaning
     difficulty: medium
+    description: Perform organizational cleanup tasks
+
   - name: code
     difficulty: hard
+    description: Solve coding-related workplace problems
+
+evaluation:
+  metric: success_rate
+  description: Measures whether the agent completes tasks successfully
