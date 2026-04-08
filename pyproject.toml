@@ -1,0 +1,7 @@
+[project]
+name = "openenv-workplace"
+version = "0.1.0"
+description = "OpenEnv Hackathon Project"
+authors = ["Dhairya"]
+
+[tool.openenv]
