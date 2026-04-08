@@ -1,0 +1,9 @@
+name: workplace-env
+description: Simulates workplace productivity tasks
+tasks:
+  - name: email
+    difficulty: easy
+  - name: cleaning
+    difficulty: medium
+  - name: code
+    difficulty: hard
