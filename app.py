@@ -1,12 +1,16 @@
 from fastapi import FastAPI
-import subprocess
-
+from inference import run
 app = FastAPI()
-
 @app.get("/")
-def run_env():
+def root():
+    return {"message": "API running"}    
+@app.post("/reset")
+def reset():
+    return {"status": "reset successful"}
+@app.post("/infer")
+def infer():
     try:
-        result = subprocess.check_output(["python", "inference.py"], stderr=subprocess.STDOUT)
-        return {"output": result.decode()}
-    except subprocess.CalledProcessError as e:
-        return {"error": e.output.decode()}
+        result = run()
+        return {"result": result}
+    except Exception as e:
+        return {"error": str(e)}
