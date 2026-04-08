@@ -2,6 +2,9 @@
 name = "openenv-workplace"
 version = "0.1.0"
 description = "OpenEnv Hackathon Project"
-authors = ["Dhairya"]
+dependencies = [
+    "openenv>=0.2.0"
+]
 
-[tool.openenv]
+[project.scripts]
+server = "app:app"
